@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="paywith" type="id" />
+    <item name="recycler" type="id" />
+    <item name="r_amt_lbl" type="id" />
+    <item name="rem_amt_edText" type="id" />
+    <item name="btn_update" type="id" />
+    <item name="seekBar_htls" type="id" />
+    <item name="seekBar_res" type="id" />
+    <item name="seekBar_trav" type="id" />
+    <item name="u_travel_edText" type="id" />
+    <item name="hotel_lbl" type="id" />
+    <item name="u_htls_edText" type="id" />
+    <item name="rest_lbl" type="id" />
+    <item name="trav_lbl" type="id" />
+    <item name="tot_amt_edText" type="id" />
+    <item name="t_amt_lbl" type="id" />
 </resources>

@@ -14,6 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelBuddy">
         <activity
+            android:name=".Timeline"
+            android:exported="false" />
+        <activity
+            android:name=".budget"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".setting"
+            android:exported="false" />
+        <activity
             android:name=".Wallet"
             android:exported="false" />
         <activity

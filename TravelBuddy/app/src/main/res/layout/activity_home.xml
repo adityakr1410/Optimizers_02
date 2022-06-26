@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Kedarnath"
+                android:textColor="#00BCD4"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:text="There are four temples around Kedarnath itself, namely- Tungnath,
+             Rudranath, Madhyamaheshwar and Kalpeshwar which form the Panch Kedar pilgrimage sites. The first hall inside Kedarnath Temple contains statues of the five Pandava brothers, Krishna, Nandi, the vehicle of Shiva and Virabhadra, one
+              of the guards of Shiva. Statues of Draupadi and other deities are also installed in the main hall."
+                android:textColor="#3A1D6C"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Badrinath"
+                android:textColor="#00BCD4"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/badrinath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:text="Gangotri is one of the four sites in the Chota Char Dham pilgrimage circuit. It is also the origin of the Ganges river and seat of the goddess Ganga. The river is called Bhagirathi at the source and acquires the name Ganga (the Ganges) from Devprayag onwards where it meets the Alaknanda. The origin of the holy river is at Gaumukh, set in the Gangotri Glacier, and is a 19 km trek from Gangotri.
+            Places to visit near the Gangotri Temple
+            •	Bhagirath Shila is believed to be the holy rock where King Bhagirath prayed to Lord Shiva.
+            •	Pandava Gufa, located 1.5 km from Gangotri, is the place where the Pandavas are believed to have meditated and rested en route Kailash. Pilgrims will have to trek up to the Pandava Gufa."
+                android:textColor="#3A1D6C"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/gangotri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Gangotri"
+                android:textColor="#00BCD4"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/gangotri2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:text="There are four temples around Kedarnath itself, namely- Tungnath,
+             Rudranath, Madhyamaheshwar and Kalpeshwar which form the Panch Kedar pilgrimage sites. The first hall inside Kedarnath Temple contains statues of the five Pandava brothers, Krishna, Nandi, the vehicle of Shiva and Virabhadra, one
+              of the guards of Shiva. Statues of Draupadi and other deities are also installed in the main hall."
+                android:textColor="#3A1D6C"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Yamunotri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Yamunotri"
+                android:textColor="#00BCD4"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/Yamunotri2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:text="The temple opens on Akshaya Tritiya  and closes on Yama Dwitiya for the winter. A little ahead is the actual source of the river Yamuna. Two hot springs are also present at Yamunotri offering relief to tired hikers at a height of 3,292 metres, Surya Kund, has boiling hot water, while Gauri Kund, had tepid water suitable for bathing. Lodging at the temple itself is limited to a few small ashrams and guest-houses. Ritual duties such as the making and distribution of prasad (sanctified offerings) and the supervision of pujas (ritual venerations) are performed by the Uniyal family of pujaris (priests). Unique aspects of ritual practice at the site include hot springs where raw rice is cooked and made into prasad.
+"
+                android:textColor="#3A1D6C"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

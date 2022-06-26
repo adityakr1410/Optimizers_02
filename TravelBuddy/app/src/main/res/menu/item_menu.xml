@@ -11,6 +11,10 @@
         android:icon="@drawable/ic_baseline_search_24"/>
     <item
         android:id="@+id/settings"
-        android:title="Settings"
+        android:title="SETTINGS"
         android:icon="@drawable/ic_settings"/>
+    <item
+        android:id="@+id/wallet"
+        android:title="WALLET"
+        android:icon="@drawable/ic_wallet"/>
 </menu>

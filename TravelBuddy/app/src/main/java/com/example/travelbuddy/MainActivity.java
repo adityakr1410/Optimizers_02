@@ -1,9 +1,7 @@
 package com.example.travelbuddy;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,18 +19,21 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    BottomNavigationView navigationView;
+    NavigationBarView NavigationBarView;
+
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     Button signout;
     TextView email;
     RecyclerView mRecyclerView;
-    Button wallet;
+//    Button wallet;
     ArrayList<RecyclerViewAdapter> mainModels;
     MainAdapter mainAdapter;
 
@@ -40,22 +41,48 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        navigationView=findViewById(R.id.bottom_nav);
-//        getSupportFragmentManager().beginTransaction().replace(R.id.bottom_nav,new Homefragment()).commit();
-        navigationView.setSelectedItemId(R.id.home);
+        NavigationBarView = findViewById(R.id.bottom_nav);
+        NavigationBarView.setSelectedItemId(R.id.home);
+        NavigationBarView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),Home.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.timeline:
+                        startActivity(new Intent(getApplicationContext(),Timeline.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(),setting.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.wallet:
+                        startActivity(new Intent(getApplicationContext(),Wallet.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+
+                return false;
+            }
+        });
+
+
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
         signout = findViewById(R.id.signout);
         email = findViewById(R.id.email);
-        wallet= findViewById(R.id.wallet);
+//        wallet = findViewById(R.id.wallet);
         mRecyclerView = findViewById(R.id.recycler);
         Integer[] photo = {R.drawable.badrinath, R.drawable.gangotri, R.drawable.kedarnath, R.drawable.yamunotri};
-          String [] chardham={"Badrinath","Gangotri","Kedarnath","Yamunotri"};
+        String[] chardham = {"Badrinath", "Gangotri", "Kedarnath", "Yamunotri"};
 
         mainModels = new ArrayList<>();
         for (int i = 0; i < photo.length; i++) {
-            RecyclerViewAdapter model = new RecyclerViewAdapter(photo[i],chardham[i]);
+            RecyclerViewAdapter model = new RecyclerViewAdapter(photo[i], chardham[i]);
             mainModels.add(model);
         }
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -65,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
 
         mainAdapter = new MainAdapter(MainActivity.this, mainModels);
         mRecyclerView.setAdapter(mainAdapter);
-
 
 
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
@@ -79,17 +105,17 @@ public class MainActivity extends AppCompatActivity {
                 signout();
             }
         });
-        wallet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent w=new Intent(MainActivity.this, Wallet.class);
-                startActivity(w);
-            }
-        });
+//        wallet.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent w = new Intent(MainActivity.this, Wallet.class);
+//                startActivity(w);
+//            }
+//        });
 
     }
 
-    private void signout() {
+   public void signout() {
         gsc.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -98,4 +124,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }
