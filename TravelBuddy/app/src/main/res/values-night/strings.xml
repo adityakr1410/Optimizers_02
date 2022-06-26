@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="payment_status" />
+    <string name="pay_with_razor_pay" />
+</resources>

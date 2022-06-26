@@ -22,12 +22,13 @@ import com.google.android.gms.tasks.Task;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     Button signout;
     TextView email;
     RecyclerView mRecyclerView;
-
+    Button wallet;
     ArrayList<RecyclerViewAdapter> mainModels;
     MainAdapter mainAdapter;
 
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         gsc = GoogleSignIn.getClient(this, gso);
         signout = findViewById(R.id.signout);
         email = findViewById(R.id.email);
+        wallet= findViewById(R.id.wallet);
         mRecyclerView = findViewById(R.id.recycler);
         Integer[] photo = {R.drawable.badrinath, R.drawable.gangotri, R.drawable.kedarnath, R.drawable.yamunotri};
           String [] chardham={"Badrinath","Gangotri","Kedarnath","Yamunotri"};
@@ -67,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 signout();
+            }
+        });
+        wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent w=new Intent(MainActivity.this, Wallet.class);
+                startActivity(w);
             }
         });
 
