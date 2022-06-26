@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/home"
+    android:title="HOME"
+    android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:id="@+id/timeline"
+        android:title="TIME LINE"
+        android:icon="@drawable/ic_timeline"/>
+    <item android:id="@+id/search"
+        android:title="SEARCH"
+        android:icon="@drawable/ic_baseline_search_24"/>
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"/>
+</menu>

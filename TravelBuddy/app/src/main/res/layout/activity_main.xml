@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/teal_700"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -10,29 +11,29 @@
         android:id="@+id/signout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="128dp"
         android:duplicateParentState="false"
         android:text="signout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.907"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/wallet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="120dp"
         android:duplicateParentState="false"
         android:text="Wallet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="416dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="4dp"
@@ -70,6 +71,22 @@
             android:textColor="#3A1D6C"
             android:textSize="40sp" />
     </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:flow_horizontalAlign="end"
+        android:background="@drawable/round_corner"
+        android:layout_margin="30dp"
+        app:menu="@menu/item_menu"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemIconSize="30dp"
+        app:labelVisibilityMode="unlabeled"
+        android:elevation="20dp"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
