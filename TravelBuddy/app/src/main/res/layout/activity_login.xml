@@ -136,11 +136,11 @@
 
 
         <ImageView
-            android:id="@+id/facebook"
+            android:id="@+id/phone"
             android:layout_width="95dp"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:src="@drawable/fb"
+            android:src="@drawable/ic_baseline_phone_24"
             app:layout_constraintEnd_toStartOf="@+id/google"
             app:layout_constraintStart_toStartOf="parent" />
 

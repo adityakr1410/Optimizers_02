@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -26,7 +27,7 @@ public class Signin extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
     ImageView google;
-
+    TextView name;
     private FirebaseAuth mAuth;
     private EditText email;
     EditText password;
@@ -36,7 +37,7 @@ public class Signin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
         login = findViewById(R.id.login);
-
+        name=findViewById(R.id.name);
         mAuth= FirebaseAuth.getInstance();
         email= findViewById(R.id.email);
         password=findViewById(R.id.password);
@@ -102,7 +103,17 @@ public class Signin extends AppCompatActivity {
 
     private void Register() {
         String user= email.getText().toString().trim();
+        String nam=name.getText().toString();
         String pass= password.getText().toString().trim();
+
+        Intent intent=new Intent(Signin.this, MainActivity.class);
+        intent.putExtra("keyname",nam);
+        startActivity(intent);
+
+        Intent in=new Intent(Signin.this, Login.class);
+        intent.putExtra("key",nam);
+        startActivity(in);
+
         if(user.isEmpty()){
             email.setError("Email can't be empty.");
         }

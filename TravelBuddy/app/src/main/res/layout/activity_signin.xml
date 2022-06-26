@@ -23,21 +23,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:id="@+id/name"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="248dp"
+        android:drawableLeft="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="ENTER YOUR NAME"
+        android:inputType="textEmailAddress"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/email"
         android:layout_width="309dp"
         android:layout_height="48dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/ic_baseline_person_outline_24"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Email Address"
-        android:inputType="textEmailAddress"
 
+        android:inputType="textEmailAddress"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <Button
         android:id="@+id/Register"
@@ -64,6 +78,7 @@
         android:inputType="textPassword"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -83,7 +98,7 @@
         android:layout_width="174dp"
         android:layout_height="32dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="Already A User?"
 
@@ -97,7 +112,7 @@
         android:id="@+id/login"
         android:layout_width="123dp"
         android:layout_height="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="@null"
         android:gravity="left|center"
         android:text="Login"
@@ -113,19 +128,21 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="64dp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/facebook"
+            android:id="@+id/phone"
             android:layout_width="95dp"
             android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:src="@drawable/fb"
+            android:src="@drawable/ic_baseline_phone_24"
             app:layout_constraintEnd_toStartOf="@+id/google"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -142,6 +159,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

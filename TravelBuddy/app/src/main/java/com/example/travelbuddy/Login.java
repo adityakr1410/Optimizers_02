@@ -45,6 +45,9 @@ public class Login extends AppCompatActivity {
         password=findViewById(R.id.password);
         Login=findViewById(R.id.login);
 
+        String username=getIntent().getStringExtra("key");
+        email.setText(username);
+
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
